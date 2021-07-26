@@ -1,0 +1,34 @@
+<!--This is my base layout nav bar. -->
+<mat-toolbar color='primary'>
+  <mat-toolbar-row>
+    <div class="logo"></div>
+      <img src="./assets/Computer_logo.jpg" height="80" />
+    <div style="width: 80%">
+      <div fxLayout="row wrap" fxLayoutAlign="end start">
+        <button style="float: right; margin: 5px;" routerLink="/services">Services</button>
+        <button style="float: right; margin: 5px;" routerLink="/">Home</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<!--This is the main card for my base layout which contains the header and then the router outlet. -->
+<div fxLayout="row wrap" style="background-color: #5c5b5b;">
+  <div fxFlex style="background-color: #5c5b5b;">
+
+    <mat-card class="outer-layer" style="background-color: #5c5b5b;">
+    <!--This is my assignment header. -->
+    <mat-card class="main-container" style="background-color: lightgray;">
+      <mat-card-title>Welcome to Bob's Computer Repair</mat-card-title>
+      <br /><br />
+
+      <!--This is the main card content which contains a router outlet. -->
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </mat-card>
+  </div>
+</div>

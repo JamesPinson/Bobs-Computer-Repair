@@ -1,0 +1,4 @@
+:host-context() button:hover {
+  background-color: #5c5b5b;
+  color: white;
+}

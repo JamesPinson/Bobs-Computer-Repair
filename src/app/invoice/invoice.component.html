@@ -1,0 +1,43 @@
+<div style="text-align: right;">
+  <button matDialogClose="cancel">Close</button>
+</div>
+
+<div style="font-weight: bold;">Invoice Summary </div>
+<hr />
+<br />
+Date: {{ today | date }}
+
+<div>
+  <br />
+  <div *ngFor="let service of services">
+    <div>
+      {{ service.name }}
+      <div style="float: right;">{{ service.price | currency }}</div>
+    </div>
+  </div>
+  <br />
+  <div>
+    <div *ngIf="parts">
+      <div>Parts </div>
+      <div style="float: right;">{{ parts | currency }}</div>
+    </div>
+  </div>
+
+  <div *ngIf="totalWithService">
+    <div>Labor</div>
+    <div style="float: right;">{{ totalWithService | currency }}</div>
+  </div>
+
+  <br />
+  <hr>
+  <div *ngIf="total">
+    <div style="font-weight: bold;">Total Amount</div>
+    <div style="float: right; font-weight: bold;">{{ total | currency }}</div>
+  </div>
+</div>
+
+<br />
+<br />
+<div style="text-align: right;">
+<button onClick="window.print()">Print</button></div>
+
